@@ -26,15 +26,3 @@ class StoreController extends Controller
         return redirect()->route('stores.index')->with('success', 'Toko berhasil ditambahkan!');
     }
 }
-class StoreController extends Controller
-{
-    // Menampilkan daftar semua toko
-    public function index()
-    {
-        // Mengambil semua data stores dari database
-        $stores = Store::all();
-
-        // Mengirim data ke view
-        return view('stores.index', compact('stores'));
-    }
-}
